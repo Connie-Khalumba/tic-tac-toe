@@ -49,6 +49,12 @@ body
     border-bottom: none; 
   }
 
+  .board .dropbox div
+  {
+    pointer-events: none;
+    scale: 1.5;
+  }
+
   .drag {
     position: relative;
     display:flex;
@@ -67,7 +73,7 @@ body
     background: rgba(255,255,255,0.1);
 }
 
-.drag .dragbox .cross {
+ .cross {
     position: relative;
     width: 50px;
     height: 50px;
@@ -75,7 +81,7 @@ body
     justify-content: center;
     align-items: center;
 }
-.drag .dragbox .cross::before
+ .cross::before
 {
  content: '';  
  position: absolute; 
@@ -84,7 +90,7 @@ body
  background: #fff;
  transform: rotate(45deg);
 } 
-.drag .dragbox .cross::after
+ .cross::after
 {
  content: '';  
  position: absolute; 
@@ -94,7 +100,7 @@ body
  transform: rotate(45deg);
 } 
 
-.drag .dragbox .circle 
+ .circle 
 {
     position: relative;
     width: 50px;
