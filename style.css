@@ -53,4 +53,67 @@ body
     position: relative;
     display:flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 420px;
+    width: 100px;
+    gap: 10px;
+    margin: 0 40px;
+    cursor: grab;
+}
+
+.drag .dragbox {
+    padding: 15px;
+    background: rgba(255,255,255,0.1);
+}
+
+.drag .dragbox .cross {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.drag .dragbox .cross::before
+{
+ content: '';  
+ position: absolute; 
+ width: 5px;
+ height: 100%;
+ background: #fff;
+ transform: rotate(45deg);
+} 
+.drag .dragbox .cross::after
+{
+ content: '';  
+ position: absolute; 
+ width: 100%;
+ height: 5px;
+ background: #fff;
+ transform: rotate(45deg);
+} 
+
+.drag .dragbox .circle 
+{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.reset
+{
+ position: absolute;   
+ bottom: 50px;
+ left: 50%;
+ transform: translate(-50%);
+ padding: 10px 25px;
+ border: none;
+ outline: none;
+ background: #161616;
+ color: #fff;
+ font-size: 2.5rem;
+ cursor: pointer;
 }
